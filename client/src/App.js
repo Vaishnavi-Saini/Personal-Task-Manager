@@ -7,6 +7,7 @@ import './App.css'
 function App() {
   const [tasks, setTasks] = useState([])
   const [filter, setFilter] = useState('all')
+  const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -40,9 +41,15 @@ function App() {
   }
 
   const filteredTasks = tasks.filter(task => {
-    if (filter === 'active') return !task.completed
-    if (filter === 'completed') return task.completed
-    return true
+    const matchesFilter = 
+      filter === 'active' ? !task.completed :
+      filter === 'completed' ? task.completed : true
+    
+    const matchesSearch = (task.title || '')
+      .toLowerCase()
+      .includes(search.toLowerCase())
+
+    return matchesFilter && matchesSearch
   })
 
   const completedCount = tasks.filter(t => t.completed).length
@@ -54,6 +61,13 @@ function App() {
   return (
     <div className="app">
       <h1>✅ Personal Task Manager</h1>
+      <input 
+        className="search-input"
+        type="text"
+        placeholder="🔍 Search tasks..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        />
       <TaskForm onTaskAdded={handleTaskAdded} />
       <FilterBar
         filter={filter}
