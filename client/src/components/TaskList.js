@@ -13,11 +13,12 @@ function TaskList({ tasks, onUpdate, onDelete }) {
 
     return (
         <div className="task-list">
-            {tasks.map(task => ( <TaskCard
+            {tasks.map(task => ( 
+                <TaskCard
                 key={task.id}
                 task={task}
                 onUpdate={onUpdate}
-                onDeleete={onDelete}
+                onDelete={onDelete}
                 />
             ))}
         </div>

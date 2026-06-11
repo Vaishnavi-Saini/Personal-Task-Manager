@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 import FilterBar from './components/FilterBar'
-import './App.css';
+import './App.css'
 
 function App() {
   const [tasks, setTasks] = useState([])
   const [filter, setFilter] = useState('all')
   const [loading, setLoading] = useState(true)
-  
+
   useEffect(() => {
     fetchTasks()
   }, [])
@@ -20,23 +20,23 @@ function App() {
       setTasks(data)
       setLoading(false)
     } catch (error) {
-      alert('Cannot connect to server. Is it running?')
+      alert('Cannot connect to server!')
       setLoading(false)
     }
   }
 
   const handleTaskAdded = (newTask) => {
-    setTasks([newTask, ...tasks])
+    setTasks(prev => [newTask, ...prev])
   }
 
   const handleTaskUpdate = (updatedTask) => {
-    setTasks(tasks.map(task =>
+    setTasks(prev => prev.map(task =>
       task.id === updatedTask.id ? updatedTask : task
     ))
   }
 
-  const handleTaskDelete = (deleteId) => {
-    setTasks(tasks.filter(task => task.id !== deleteId))
+  const handleTaskDelete = (deletedId) => {
+    setTasks(prev => prev.filter(task => task.id !== deletedId))
   }
 
   const filteredTasks = tasks.filter(task => {
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Personal Task Manager</h1>
+      <h1>✅ Personal Task Manager</h1>
       <TaskForm onTaskAdded={handleTaskAdded} />
       <FilterBar
         filter={filter}
@@ -70,4 +70,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

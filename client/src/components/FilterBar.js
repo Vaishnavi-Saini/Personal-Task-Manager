@@ -11,7 +11,7 @@
             <div className="filter-button">
                 <button
                 className={filter === 'all' ? 'active' : ''}
-                onClick={() => onFilterChange('active')}
+                onClick={() => onFilterChange('all')}
                 >All</button>
                 <button 
                 className={filter === 'active' ? 'active' : ''}
