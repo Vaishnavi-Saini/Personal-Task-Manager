@@ -34,7 +34,7 @@ function TaskForm({ onTaskAdded }) {
     }
 
     return (
-        <div className="task Form">
+        <div className="task-form">
             <h2>Add New Task</h2>
             <div className="form-group">
         <input
@@ -52,13 +52,14 @@ function TaskForm({ onTaskAdded }) {
         />
         </div>
         <div className="form-group">
+        <label>Due Date (optional)</label>
         <input
           type="date"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
         />
         </div>
-      <button onClick={handleSubmit}>Add Task</button>
+      <button className="add-task-btn" onClick={handleSubmit}>Add Task</button>
     </div>
   )
 }

@@ -8,17 +8,17 @@
                 <span>Completed: {completedTasks}</span>
                 <span>Total: {totalTasks}</span>
             </div>
-            <div className="filter-button">
+            <div className="filter-buttons">
                 <button
-                className={filter === 'all' ? 'active' : ''}
+                className={filter === 'all' ? 'filter-btn active' : 'filter-btn'}
                 onClick={() => onFilterChange('all')}
                 >All</button>
                 <button 
-                className={filter === 'active' ? 'active' : ''}
+                className={filter === 'active' ? 'filter-btn active' : 'filter-btn'}
                 onClick={() => onFilterChange('active')}
                 >Active</button>
                 <button 
-                className={filter === 'completed' ? 'active' : ''}
+                className={filter === 'completed' ? 'filter-btn active' : 'filter-btn'}
                 onClick={() => onFilterChange('completed')}
                 >Completed</button>
             </div>

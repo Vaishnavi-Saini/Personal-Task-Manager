@@ -8,19 +8,11 @@
     "createdAt": "2026-06-11T08:35:40.585Z"
   },
   {
-    "id": "1781167474093",
-    "title": "hvdsuh",
-    "description": "ksjfhsfsiruow",
-    "dueDate": "2026-06-03",
-    "completed": false,
-    "createdAt": "2026-06-11T08:44:34.094Z"
-  },
-  {
     "id": "1781170526928",
     "title": "make maggie",
     "description": "masala maggie lunch",
     "dueDate": "2026-06-11",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-06-11T09:35:26.929Z"
   },
   {
@@ -30,5 +22,21 @@
     "dueDate": "2026-06-11",
     "completed": false,
     "createdAt": "2026-06-11T13:20:07.638Z"
+  },
+  {
+    "id": "1781187116222",
+    "title": "test",
+    "description": "give test at 7.30 pm.",
+    "dueDate": "2026-06-13",
+    "completed": false,
+    "createdAt": "2026-06-11T14:11:56.222Z"
+  },
+  {
+    "id": "1781249004509",
+    "title": "add CSS",
+    "description": "add styling to personal task manager",
+    "dueDate": "2026-06-12",
+    "completed": false,
+    "createdAt": "2026-06-12T07:23:24.509Z"
   }
 ]
