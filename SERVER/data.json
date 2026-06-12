@@ -36,7 +36,7 @@
     "title": "add CSS",
     "description": "add styling to personal task manager",
     "dueDate": "2026-06-12",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-06-12T07:23:24.509Z"
   }
 ]
