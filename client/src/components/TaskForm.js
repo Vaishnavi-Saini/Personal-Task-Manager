@@ -16,7 +16,7 @@ function TaskForm({ onTaskAdded }) {
         const newTask = { title, description, dueDate }
 
         try {
-            const response = await fetch('http://localhost:5000/api/tasks', {
+            const response = await fetch('https://personal-task-manager-production-7ba4.up.railway.app/api/tasks', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newTask)

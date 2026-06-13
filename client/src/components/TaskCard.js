@@ -44,7 +44,7 @@ function TaskCard({ task, onUpdate, onDelete }) {
   const handleDelete = async () => {
     const confirmed = window.confirm('Are you sure you want to delete this task?')
     if (!confirmed) return
-    await fetch(`http://localhost:5000/api/tasks/${task.id}`, {
+    await fetch(`https://personal-task-manager-production-7ba4.up.railway.app/api/tasks/${task.id}`, {
       method: 'DELETE'
     })
     onDelete(task.id)
