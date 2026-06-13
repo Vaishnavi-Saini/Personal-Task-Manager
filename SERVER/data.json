@@ -17,8 +17,8 @@
   },
   {
     "id": "1781184007638",
-    "title": "exercise",
-    "description": "be healthy",
+    "title": "Exercise ",
+    "description": "exercise daily for atleast 30 min!!!",
     "dueDate": "2026-06-11",
     "completed": false,
     "createdAt": "2026-06-11T13:20:07.638Z"
@@ -28,7 +28,7 @@
     "title": "test",
     "description": "give test at 7.30 pm.",
     "dueDate": "2026-06-13",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-06-11T14:11:56.222Z"
   },
   {

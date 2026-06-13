@@ -2,6 +2,8 @@
 A full-stack task management application built with Node.js + Express (backend) and React (frontend) as a part of the studio Graphene Associate Software Engineer assessment.
 
 ## Live Demo
+- Frontend: https://personal-task-manager-rho-sable.vercel.app
+- Backend: https://personal-task-manager-production-7ba4.up.railway.app
 
 ## Tech Stack
 
