@@ -8,7 +8,7 @@ function TaskCard({ task, onUpdate, onDelete }) {
 
   const handleToggleComplete = async () => {
     const response = await fetch(
-      `http://localhost:5000/api/tasks/${task.id}`,
+      `https://personal-task-manager-production-7ba4.up.railway.app/api/tasks/${task.id}`,
       {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
